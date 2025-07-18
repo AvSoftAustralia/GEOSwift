@@ -13,11 +13,17 @@ let package = Package(
     targets: [
         .target(
             name: "GEOSwift",
-            dependencies: ["geos"]
+            dependencies: ["geos"],
+            swiftSettings: [
+                .unsafeFlags(["-fprofile-instr-generate"]) // Fix
+            ])
         ),
         .testTarget(
             name: "GEOSwiftTests",
-            dependencies: ["GEOSwift"]
+            dependencies: ["GEOSwift"],
+            swiftSettings: [
+                .unsafeFlags(["-fprofile-instr-generate"]) // Fix
+            ])
         )
     ]
 )
