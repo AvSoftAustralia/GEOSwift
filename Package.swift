@@ -1,4 +1,4 @@
-// swift-tools-version:5.9
+// swift-tools-version:5.8
 import PackageDescription
 
 let package = Package(
@@ -14,9 +14,7 @@ let package = Package(
         .target(
             name: "GEOSwift",
             dependencies: ["geos"],
-            swiftSettings: [
-                .unsafeFlags(["-Xfrontend", "-profile-coverage-mapping"]) // Fix
-            ]
+            swiftSettings: [ .unsafeFlags(["-Xfrontend", "-profile-coverage-mapping"]) ]
         ),
         .testTarget(
             name: "GEOSwiftTests",
