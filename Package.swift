@@ -14,7 +14,6 @@ let package = Package(
         .target(
             name: "GEOSwift",
             dependencies: ["geos"],
-            swiftSettings: [ .unsafeFlags(["-Xfrontend", "-profile-coverage-mapping"]) ]
         ),
         .testTarget(
             name: "GEOSwiftTests",
