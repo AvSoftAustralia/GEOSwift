@@ -16,14 +16,14 @@ let package = Package(
             dependencies: ["geos"],
             swiftSettings: [
                 .unsafeFlags(["-fprofile-instr-generate"]) // Fix
-            ])
+            ]
         ),
         .testTarget(
             name: "GEOSwiftTests",
             dependencies: ["GEOSwift"],
             swiftSettings: [
                 .unsafeFlags(["-fprofile-instr-generate"]) // Fix
-            ])
+            ]
         )
     ]
 )
