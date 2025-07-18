@@ -15,14 +15,14 @@ let package = Package(
             name: "GEOSwift",
             dependencies: ["geos"],
             swiftSettings: [
-                .unsafeFlags(["-fprofile-instr-generate"]) // Fix
+                .unsafeFlags(["-Xfrontend", "-profile-coverage-mapping"]) // Fix
             ]
         ),
         .testTarget(
             name: "GEOSwiftTests",
             dependencies: ["GEOSwift"],
             swiftSettings: [
-                .unsafeFlags(["-fprofile-instr-generate"]) // Fix
+                .unsafeFlags(["-Xfrontend", "-profile-coverage-mapping"]) // Fix
             ]
         )
     ]
